@@ -1,3 +1,3 @@
 #!/bin/bash
-# script to get the body size of a request
-curl -Is "$1" | grep -w 'Content-Length' | cut -f2 -d' '
+# A Bash script that takes in a URL, sends a request and displays the size of the body of the response
+curl -sI "$1" | grep "Content-Length:" | cut -d " " -f 2

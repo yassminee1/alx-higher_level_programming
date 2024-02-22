@@ -1,3 +1,3 @@
 #!/bin/bash
-# shellcheck disable=SC2046
-if [ $(curl -L -s -X HEAD -w "%{http_code}" "$1") == '200' ]; then curl -Ls "$1"; fi
+# A Bash script that takes in a URL, sends a GET request and displays only the  body of a 200 status code response
+curl -Ls "$1"

@@ -1,3 +1,3 @@
 #!/bin/bash
-# script to send custom headers to servers
-curl -s -H "X-HolbertonSchool-User-Id: 98" "$1"
+# Script that takes an URL and displays the body of the response
+curl -sH "X-School-User-Id: 98" "${1}"

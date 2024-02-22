@@ -1,3 +1,3 @@
 #!/bin/bash
-# script to get the allowed methods in an server if availaible through OPTIONS http request
-curl -s -I -X OPTIONS "$1" | grep 'Allow:' | cut -f2- -d' '
+# Script that takes an URL and shows the Allowed OPTIONS
+curl -sI -X OPTIONS "$1" | grep "Allow:" | cut -d " " -f 2-
